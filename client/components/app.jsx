@@ -30,6 +30,22 @@ var App = React.createClass({
       });
     },
 
+    handleArtistClick: function(e) {
+      this.setState({
+        suggestedArtists: [
+          { "id": "ARH1N081187B9AC562", "name": "Thom Yorke" },
+          { "id": "ARW64KS1187FB3C94D", "name": "Doves" },
+          { "id": "AR0L04E1187B9AE90C", "name": "The Verve" },
+          { "id": "ARTNON61187B98D6EE", "name": "Elbow" },
+          { "id": "ARG7LMD1187FB4B064", "name": "Mansun" },
+          { "id": "ARKVITV1187B9AE854", "name": "Blur" },
+          { "id": "ARZ0RS81187B98F252", "name": "Mercury Rev" },
+          { "id": "ARIIMPS1187FB4CD03", "name": "Richard Ashcroft" },
+          { "id": "ARZNOIY1187B989D9C", "name": "On a Friday" }
+        ]
+      });
+    },
+
     render: function() {
       return (
         <div>
@@ -40,7 +56,7 @@ var App = React.createClass({
             { _.map(this.state.suggestedArtists, function(artist, i) {
               return (
                 <div>
-                  <a href='#'>{artist.name}</a>
+                  <a href='#' onClick={ this.handleArtistClick }>{artist.name}</a>
                 </div>
               )
             }, this) }
