@@ -10,8 +10,8 @@ var App = React.createClass({
     render: function(){
       return (
         <div>
-          <h1>EchoSuggest</h1>
-          <input placeholder='artist name' />
+          <h1>Echo Suggest</h1>
+          <input placeholder='artist name' ref='artistName' />
           <button onClick={ this.handleSearchClick }>Search</button>
         </div>
       );
