@@ -1,0 +1,32 @@
+{
+  "name": "echo-suggest",
+  "version": "0.0.0",
+  "description": "",
+  "author": "cmrnh",
+  "private": false,
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "start": "NODE_ENV=development gulp"
+  },
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "dependencies": {
+    "express": "~4.12.3",
+    "lodash": "~3.7.0",
+    "react": "^0.13.3"
+  },
+  "devDependencies": {
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.5.2",
+    "gulp-nodemon": "^2.0.3",
+    "reactify": "^1.1.0",
+    "run-sequence": "^1.1.2"
+  }
+}
