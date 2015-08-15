@@ -1,6 +1,8 @@
 var React = require('react');
 var _ = require('lodash');
 
+var Artist = require('./artist.jsx');
+
 var App = React.createClass({
 
     getInitialState: function() {
@@ -55,9 +57,7 @@ var App = React.createClass({
           <div>
             { _.map(this.state.suggestedArtists, function(artist, i) {
               return (
-                <div>
-                  <a href='#' onClick={ this.handleArtistClick }>{artist.name}</a>
-                </div>
+                <Artist name={ artist.name } onClick={ this.handleArtistClick } />
               )
             }, this) }
           </div>
